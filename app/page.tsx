@@ -1,57 +1,62 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
+    <div className="flex items-stretch justify-center gap-6 w-screen h-screen p-6">
+      <div className="flex-1 pointer relative h-full">
+        <div className="h-full flex items-center p-4 transition-transform hover:scale-105 hover:cursor-pointer">
+          <Image
+            height={600}
+            width={484}
+            src="/logo-krmelin.png"
+            alt="Krmelin"
+            className="border bg-white border-zinc-100 shadow-lg rounded-xl overflow-hidden object-cover"
+          />
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+        <div className="absolute top-0 left-0 w-full h-full -z-10">
+          <Image src="/al_smes.png" alt="Krmelin" className="object-cover blur-sm" placeholder="blur" blurDataURL="/al_smes-blur.png" fill />
+        </div>
+      </div>
+      <div className="flex-1 pointer relative h-full">
+        <div className="h-full flex items-center p-4 transition-transform hover:scale-105 hover:cursor-pointer">
+          <Image
+            height={600}
+            width={484}
+            src="/logo-havirov.svg"
+            alt="Havirov"
+            className="border bg-white border-zinc-100 shadow-lg rounded-xl overflow-hidden object-cover"
+          />
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full -z-10">
+          <Image src="/nerez.png" alt="Krmelin" className="object-cover blur-sm" placeholder="blur" blurDataURL="/nerez-blur.png" fill />
+        </div>
+      </div>
+      <div className="flex-1 pointer relative h-full">
+        <div className="h-full flex items-center p-4 transition-transform">
+          <div className="bg-white w-full rounded-xl shadow-lg text-center p-4">
+            <Image
+              height={128}
+              width={128}
+              src="/hrebo.jpeg"
+              alt="Hrebo"
+              className="border mx-auto border-zinc-100 shadow-lg rounded-full overflow-hidden object-cover"
+            />
+            <div>
+              <b>Ing. Lukáš Hrebík</b>
+            </div>
+            <div>LH Store s.r.o.</div>
+            <div>Staroveská 567</div>
+            <div>739 24 Krmelín</div>
+            <div>IČ 278 01 586</div>
+            <div>DIČ CZ278 01 586</div>
+            <div>Datová schránka: xqeyije</div>
+            <div>E-mail: info@sbernakrmelin.cz</div>
+          </div>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full -z-10">
+          <Image src="/olovo.png" alt="Krmelin" className="object-cover blur-sm" placeholder="blur" blurDataURL="/olovo-blur.png" fill />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
