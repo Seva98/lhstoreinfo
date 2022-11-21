@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="flex items-stretch justify-center gap-6 w-screen h-screen p-6">
-      <div className="flex-1 pointer relative h-full">
-        <div className="h-full flex items-center p-4 transition-transform hover:scale-105 hover:cursor-pointer">
+    <div className="flex flex-col sm:flex-row items-stretch justify-center gap-6 w-screen h-fit sm:h-screen p-6">
+      <div className="flex-1 pointer relative h-screen">
+        <div className="h-full flex items-center justify-center p-4 transition-transform hover:scale-105 hover:cursor-pointer">
           <Image
             height={600}
             width={484}
@@ -17,8 +17,8 @@ export default function Home() {
           <Image src="/al_smes.png" alt="Krmelin" className="object-cover blur-sm" placeholder="blur" blurDataURL="/al_smes-blur.png" fill />
         </div>
       </div>
-      <div className="flex-1 pointer relative h-full">
-        <div className="h-full flex items-center p-4 transition-transform hover:scale-105 hover:cursor-pointer">
+      <div className="flex-1 pointer relative h-screen sm:h-full">
+        <div className="h-full flex items-center justify-center p-4 transition-transform hover:scale-105 hover:cursor-pointer">
           <Image
             height={600}
             width={484}
@@ -31,8 +31,8 @@ export default function Home() {
           <Image src="/nerez.png" alt="Krmelin" className="object-cover blur-sm" placeholder="blur" blurDataURL="/nerez-blur.png" fill />
         </div>
       </div>
-      <div className="flex-1 pointer relative h-full">
-        <div className="h-full flex items-center p-4 transition-transform">
+      <div className="flex-1 pointer relative h-screen sm:h-full">
+        <div className="h-full flex items-center justify-center p-4 transition-transform">
           <div className="bg-white w-full rounded-xl shadow-lg text-center p-4">
             <Image
               height={128}
